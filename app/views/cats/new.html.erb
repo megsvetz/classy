@@ -1,0 +1,6 @@
+<h1>New Category</h1>
+<hr />
+<%= form_for(@cat) do |c| %>
+ <h3> Name <%= c.text_field(:name) %></h3>
+ <%= c.submit "Save", class:"btn btn-success btn-lg" %>
+ <% end %>
