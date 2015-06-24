@@ -26,7 +26,7 @@ RSpec.describe CatsController, type: :controller do
 
     it "does not return http success" do 
       get :show, id: '1234'
-      expect(response).to_not have_http_status(:success)
+      expect(response).to have_http_status(:not_found)
     end
   end #descibe GET #show
 
@@ -39,15 +39,37 @@ RSpec.describe CatsController, type: :controller do
 
   describe "PUT #update" do
     it "updates cat correctly" do
-      put :update, id: cat.id, cat => {name: 'edwardo'}
+      put :update, id: cat.id, cat: {name: 'edwardo'}
       expect(response).to have_http_status(:redirect)
       expect(cat.reload.name).to eq('edwardo')
       expect(flash[:notice]).to be_present
     end
 
-    it "does't update correctly" do 
-      put :update, id: cat.id, cat => {name: nil}
+    it "doesn't update correctly" do 
+      put :update, id: cat.id, cat: {name: nil}
       expect(flash[:error]).to be_present
     end
   end #describe put #update endtag
+
+  describe "POST #create" do
+    it "Creates Category into database correctly" do
+      post :create, cat: {name: 'Cars'} 
+      expect(response).to have_http_status(:redirect)
+      expect(flash[:notice]).to be_present
+    end
+  end #describe POST #create endtag
+
+  describe "DELETE #destroy" do
+    it "deletes" do
+      delete :destroy, id: cat.id
+      expect(Cat.all.count).to eq(0)
+      expect(flash[:alert]).to be_present
+      expect(response).to have_http_status(:redirect)
+    end
+    it "does not delete" do
+      delete :destroy, id: '5432'
+      expect(response).to have_http_status(:not_found)
+      #expect(flash[:error]).to be_present
+    end
+  end #describe DELETE #destroy endtag
 end
