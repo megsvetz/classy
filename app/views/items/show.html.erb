@@ -1,4 +1,9 @@
-<div class: "text-align:center">
+<br><br>
+<div class="text-center center-block">
+  <% if @item.item_pic.present? %>  
+      <%= image_tag(@item.item_pic.url(:medium), :class => "img-thumbnail") %>
+      <br/>
+  <% end %>
 
   <h1><%= @item.name %> </h1>
   <h3> Price: $ <%= @item.price %> </h3>

@@ -1,0 +1,25 @@
+<br>
+<br>
+<div class="text-center center-block">
+  <h1 class="header">Edit Listing</h1><br>
+
+  <%= form_for @item, :url => item_path(@item.id), :html => { :multipart => true } do |f| %>
+
+    <h3>Title:
+    <%= f.text_field :name, class: "form-control", :placeholder => "Title: ", :style => "width:100%;" %></h3>
+    <br>
+    <h4>Price:
+    <%= f.text_field :price, class: "form-control", :placeholder => "Price: $", :style => "width:100%;" %></h4>
+    <br>
+    <h4>Description:
+    <%= f.text_area :description, class: "form-control", :placeholder => "Description of Item: ", :style => "width:100%;" %></h4>
+    <br>
+    <br>
+    <%= f.file_field :item_pic %>
+    <br>
+    <%= f.submit("Update Listing", class: "myButton") %>
+    <br><br>
+
+  <% end %>
+</div>
+
