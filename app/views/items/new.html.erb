@@ -2,17 +2,19 @@
 
 <%= form_for(@item, url: items_path) do |f| %>
 
-  <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:50%;" %>
+  <h3>Title: <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:50%;" %></h1>
   <br>
-  <%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:50%;" %>
+  <h4>Price: $<%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:50%;" %></h4>
   <br>
-  <%= f.text_area :description, class: "form-control", :placeholder => "Enter Description",:style => "width:50%;" %>
+  <h5>Description: <%= f.text_area :description, class: "form-control", :placeholder => "Enter Description",:style => "width:50%;" %></h5>
   <br>
-  <%= f.file_field :receipt_pic %>
+  <h5>Category: <%= f.collection_select :cat_id, Cat.all, :id, :name, class: "form-control" %></h5>
   <br>
-  <%= f.hidden_field :cat_id, value: @cat.id %>
+  <h5>Upload Photo: <%= f.file_field :item_pic %></h5>
+  <br>
+  <%= %>
   <br>
   <%= f.submit("Create Listing") %>
-  <br>
+  <br><br>
 
 <% end %>

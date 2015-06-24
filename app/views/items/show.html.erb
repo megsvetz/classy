@@ -1,0 +1,12 @@
+<div class: "text-align:center">
+
+  <h1><%= @item.name %> </h1>
+  <h3> Price: $ <%= @item.price %> </h3>
+  <h5> Description: <%= @item.description %> </h5>
+
+  <br><br>
+  <a href="<%= edit_item_path(@item) %>" class="btn btn-info"><span class = "glyphicon glyphicon-pencil"></span></a>
+  <a href="<%= item_path(@item) %>" class="btn btn-danger" data-method="delete"><span class="glyphicon glyphicon-trash"></span></a>
+  <br><br>
+
+</div>
