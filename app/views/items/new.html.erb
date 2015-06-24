@@ -1,0 +1,18 @@
+<h1 class="header">Create New Listing</h1>
+
+<%= form_for(@item, url: items_path) do |f| %>
+
+  <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:50%;" %>
+  <br>
+  <%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:50%;" %>
+  <br>
+  <%= f.text_area :description, class: "form-control", :placeholder => "Enter Description",:style => "width:50%;" %>
+  <br>
+  <%= f.file_field :receipt_pic %>
+  <br>
+  <%= f.hidden_field :cat_id, value: @cat.id %>
+  <br>
+  <%= f.submit("Create Listing") %>
+  <br>
+
+<% end %>

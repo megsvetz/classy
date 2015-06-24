@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>Classy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <hr />
+        <footer>
+          copyright &copy; <%= Time.now.year %>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
