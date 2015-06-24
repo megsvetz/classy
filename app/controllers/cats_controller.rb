@@ -38,8 +38,6 @@ class CatsController < ApplicationController
   def destroy
     if @cat.destroy
       flash[:alert]="Category deleted!"
-    else
-      flash[:error]="Category deletion failed!"
     end
     redirect_to(cats_path)
   end #destroy endtag

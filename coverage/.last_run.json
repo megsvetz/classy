@@ -1,5 +1,9 @@
 {
   "result": {
+<<<<<<< Updated upstream
     "covered_percent": 99.17
+=======
+    "covered_percent": 100.0
+>>>>>>> Stashed changes
   }
 }

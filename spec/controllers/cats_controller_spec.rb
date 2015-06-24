@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CatsController, type: :controller do
+  
   let(:cat) { Cat.create(name: "Cars") }
 
   describe "GET #index" do
@@ -35,13 +36,14 @@ RSpec.describe CatsController, type: :controller do
       get :edit, id: cat.id
       expect(response).to have_http_status(:success)
     end
-  end
+  end #describe GET edit endtag
 
   describe "PUT #update" do
     it "updates cat correctly" do
-      put :update, id: cat.id, cat: {name: 'edwardo'}
+      new_name = 'edwardo'
+      put :update, id: cat.id, cat: {name: new_name}
       expect(response).to have_http_status(:redirect)
-      expect(cat.reload.name).to eq('edwardo')
+      expect(cat.reload.name).to eq(new_name)
       expect(flash[:notice]).to be_present
     end
 
@@ -66,10 +68,10 @@ RSpec.describe CatsController, type: :controller do
       expect(flash[:alert]).to be_present
       expect(response).to have_http_status(:redirect)
     end
+    
     it "does not delete" do
       delete :destroy, id: '5432'
       expect(response).to have_http_status(:not_found)
-      #expect(flash[:error]).to be_present
     end
   end #describe DELETE #destroy endtag
 end

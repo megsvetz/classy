@@ -1,32 +1,17 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< Updated upstream
       "/Users/megsvetz/megsvetz/coding/sites/classy/spec/controllers/items_controller_spec.rb": [
         1,
         null,
         1,
         7,
         1,
+=======
+      "/Users/Admin/dev/classy/spec/controllers/cats_controller_spec.rb": [
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
+>>>>>>> Stashed changes
         null,
         null,
         null,
@@ -35,13 +20,20 @@
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
+        null,
+<<<<<<< Updated upstream
         null,
         null,
         null,
+=======
+>>>>>>> Stashed changes
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+<<<<<<< Updated upstream
         1,
         null,
         1,
@@ -49,14 +41,14 @@
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        1,
+=======
+>>>>>>> Stashed changes
         null,
         null,
         null,
+        null,
+        null,
+<<<<<<< Updated upstream
         1,
         1,
         1,
@@ -315,6 +307,8 @@
         1,
         null,
         null,
+=======
+>>>>>>> Stashed changes
         null,
         null,
         null,
@@ -362,6 +356,7 @@
         null,
         null,
         null,
+<<<<<<< Updated upstream
         null
       ],
       "/Users/megsvetz/megsvetz/coding/sites/classy/app/helpers/application_helper.rb": [
@@ -398,26 +393,19 @@
         null,
         null,
         null,
+=======
+>>>>>>> Stashed changes
         null,
         null,
         null,
-        1,
-        null,
-        null,
-        1,
-        2,
-        1,
-        1,
-        null,
-        1,
-        1,
         null,
         null,
         null,
-        1,
-        1,
-        1,
         null,
+        null,
+        null,
+        null,
+<<<<<<< Updated upstream
         1,
         null,
         null,
@@ -449,5 +437,14 @@
       ]
     },
     "timestamp": 1435178664
+=======
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1435178660
+>>>>>>> Stashed changes
   }
 }
