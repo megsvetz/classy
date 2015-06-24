@@ -67,13 +67,13 @@ RSpec.describe ItemsController, type: :controller do
   describe "DELETE #destroy" do
     it "deletes" do
       delete :destroy, id: item.id
-      expect(item.all.count).to eq(0)
+      expect(Item.all.count).to eq(0)
       expect(flash[:alert]).to be_present
-      expect(response).to_not have_http_status(:redirect)
+      expect(response).to have_http_status(:redirect)
     end
     it "does not delete" do
       delete :destroy, id: '5432'
       expect(flash[:error]).to be_present
-      expect(response).to_not have_http_status(:redirect)
+      expect(response).to have_http_status(:not_found)
     end
 end
