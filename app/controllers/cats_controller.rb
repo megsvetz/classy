@@ -53,3 +53,4 @@ class CatsController < ApplicationController
   end
 
 end
+  
