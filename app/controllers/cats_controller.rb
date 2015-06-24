@@ -1,5 +1,5 @@
 class CatsController < ApplicationController
-  before_action find_cat, only: [:update, :edit, :destroy, :show]
+  before_action :find_cat, only: [:update, :edit, :destroy, :show]
 
   def index
     @cats = Cat.all
@@ -13,7 +13,7 @@ class CatsController < ApplicationController
   end
 
   def create
-    if @cat.save(cat_params)
+    if @cat = Cat.create(cat_params)
       flash[:notice]= "Category created successfully!"
       redirect_to(cats_path)
     else
@@ -40,7 +40,9 @@ class CatsController < ApplicationController
       flash[:alert]="Category deleted!"
     else
       flash[:error]="Category deletion failed!"
-  end
+    end
+    redirect_to(cats_path)
+  end #destroy endtag
 
   private
 
@@ -49,8 +51,10 @@ class CatsController < ApplicationController
   end
 
   def find_cat
-    @cat = Cat.find_by(:id params[:id])
-  end
-
+    @cat = Cat.find_by(id: params[:id]) 
+    unless @cat
+      render(text: "you killed it", status: :not_found)
+    end
+  end #find_cat endtag
 end
   
