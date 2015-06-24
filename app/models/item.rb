@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
   belongs_to :cat
-  validates_presence_of :name, :price
+  validates_presence_of :name
 end
