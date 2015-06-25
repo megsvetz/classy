@@ -25,10 +25,10 @@ RSpec.describe ItemsController, type: :controller do
       expect(response).to have_http_status(:success)
     end
 
-    # it "does not show item" do 
-    #   get :show, id: '1234'
-    #   expect(response).to_not have_http_status(:success)
-    # end
+    it "does not show item" do 
+      get :show, id: '1234'
+      expect(response).to have_http_status(:not_found)
+    end
   end #descibe GET #show
 
   describe "GET #edit" do
@@ -48,8 +48,9 @@ RSpec.describe ItemsController, type: :controller do
     end
 
     it "does't update correctly" do 
-      put :update, id: item.id, :item => {name: nil, price: 435.65}
-      expect(flash[:error]).to be_present
+      put :update, id: item.id, :item => {name: nil}
+      expect(response).to render_template(:edit)
+      should set_flash[:error]
     end
   end #describe put #update endtag
 
@@ -59,25 +60,26 @@ RSpec.describe ItemsController, type: :controller do
       expect(response).to have_http_status(:redirect)
       expect(flash[:notice]).to be_present
     end
-    # it "does not create" do
-    #   post :create, item: {name: nil, price: 1500.99, description: "Black 1999 Nissan Sentra with 187,000 miles!", cat_id: 2}
-    #   expect(response).to have_http_status(:redirect)
-    #   expect(flash[:error]).to be_present
-    # end
+    it "does not create" do
+      post :create, :item => {name: nil}
+      should set_flash[:error]
+      expect(response).to render_template(:new)
+    end
   end
 
   describe "DELETE #destroy" do
     it "deletes" do
       delete :destroy, id: item.id
       expect(Item.all.count).to eq(0)
-      expect(flash[:alert]).to be_present
+      should set_flash[:alert]
       expect(response).to have_http_status(:redirect)
     end
-
-    # it "does not delete" do
-    #   delete :destroy, id: nil
-    #   expect(flash[:error]).to be_present
-    #   expect(response).to have_http_status(:not_found)
-    # end
+    it "does not delete" do
+      item
+      delete :destroy, id: '432'
+      expect(response.body).to eq "Item not found."
+      expect(response).to have_http_status(:not_found)
+    end
   end
 end
+
