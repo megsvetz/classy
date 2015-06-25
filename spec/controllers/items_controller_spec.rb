@@ -1,13 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
-  let(:cat) { create(:cat) }
-  let(:item) { create(:item, cat: cat) }
-
+  let(:item){create(:item)}
 
   describe "GET #index" do
     it "returns http success" do
-      item
       get :index
       expect(response).to have_http_status(:success)
     end
@@ -76,7 +73,6 @@ RSpec.describe ItemsController, type: :controller do
       expect(response).to have_http_status(:redirect)
     end
     it "does not delete" do
-      item
       delete :destroy, id: '432'
       expect(response.body).to eq "Item not found."
       expect(response).to have_http_status(:not_found)
