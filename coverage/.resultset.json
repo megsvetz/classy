@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Admin/dev/classy/spec/controllers/cats_controller_spec.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/controllers/cats_controller_spec.rb": [
         1,
         null,
         1,
@@ -68,7 +68,7 @@
         1,
         1,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -88,7 +88,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/spec/rails_helper.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -142,14 +142,14 @@
         1,
         null
       ],
-      "/Users/Admin/dev/classy/config/environment.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Admin/dev/classy/config/application.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/application.rb": [
         1,
         null,
         1,
@@ -177,12 +177,12 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/boot.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Admin/dev/classy/config/environments/test.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/environments/test.rb": [
         1,
         null,
         null,
@@ -226,7 +226,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/initializers/assets.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -239,7 +239,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/initializers/backtrace_silencers.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -248,18 +248,18 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/initializers/cookies_serializer.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Admin/dev/classy/config/initializers/filter_parameter_logging.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Admin/dev/classy/config/initializers/inflections.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -277,18 +277,18 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/initializers/mime_types.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/initializers/session_store.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Admin/dev/classy/config/initializers/wrap_parameters.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -304,7 +304,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/config/routes.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/config/routes.rb": [
         1,
         null,
         null,
@@ -368,23 +368,23 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/helpers/application_helper.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Admin/dev/classy/app/helpers/cats_helper.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/helpers/cats_helper.rb": [
         1,
         null
       ],
-      "/Users/Admin/dev/classy/app/helpers/items_helper.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/helpers/items_helper.rb": [
         1,
         null
       ],
-      "/Users/Admin/dev/classy/app/helpers/welcomes_helper.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/helpers/welcomes_helper.rb": [
         1,
         null
       ],
-      "/Users/Admin/dev/classy/app/controllers/cats_controller.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/controllers/cats_controller.rb": [
         1,
         1,
         null,
@@ -406,11 +406,12 @@
         1,
         2,
         2,
-        2,
+        1,
+        1,
         null,
-        0,
-        0,
-        0,
+        1,
+        null,
+        1,
         null,
         null,
         null,
@@ -449,14 +450,14 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/controllers/application_controller.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/Admin/dev/classy/spec/controllers/items_controller_spec.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/controllers/items_controller_spec.rb": [
         1,
         null,
         1,
@@ -543,7 +544,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/controllers/items_controller.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/controllers/items_controller.rb": [
         1,
         1,
         null,
@@ -602,7 +603,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/spec/controllers/welcomes_controller_spec.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/controllers/welcomes_controller_spec.rb": [
         1,
         null,
         1,
@@ -616,32 +617,13 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/controllers/welcomes_controller.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/controllers/welcomes_controller.rb": [
         1,
         1,
         null,
         null
       ],
-
-      "/Users/Admin/dev/classy/spec/helpers/welcomes_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/Admin/dev/classy/spec/models/cat_spec.rb": [
-
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/models/cat_spec.rb": [
         1,
         null,
         1,
@@ -662,7 +644,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/models/cat.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/models/cat.rb": [
         1,
         1,
         1,
@@ -672,7 +654,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/spec/models/item_spec.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/spec/models/item_spec.rb": [
         1,
         null,
         1,
@@ -700,7 +682,7 @@
         null,
         null
       ],
-      "/Users/Admin/dev/classy/app/models/item.rb": [
+      "/Users/megsvetz/megsvetz/coding/sites/classy/app/models/item.rb": [
         1,
         1,
         1,
@@ -713,18 +695,9 @@
         1,
         1,
         null,
-        null
-
-      ],
-      "/Users/Admin/dev/classy/spec/views/welcomes/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
         null
       ]
     },
-    "timestamp": 1435249803
-
+    "timestamp": 1435251187
   }
 }

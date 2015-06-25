@@ -1,8 +1,9 @@
 <div class="text-center center-block">
   <h1 class="header">Create New Listing</h1>
+  <hr />
+  <row><a href="<%= items_path %>" class="btn btn-primary pull-left" style="display:inline-block">Back to Listings</a></row><br><br>
 
   <%= form_for @item, :url => items_path, :html => { :multipart => true } do |f| %>
-
     <h3>Title: <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:100%;" %></h1>
     <br>
     <h4>Price: <%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:100%;" %></h4>
@@ -19,5 +20,3 @@
     <br><br>
   <% end %>
 </div>
-
-

@@ -1,7 +1,6 @@
-<br>
-<br>
 <div class="text-center center-block">
-  <h1 class="header">Edit Listing</h1><br>
+  <h1 class="header">Edit Listing</h1>
+  <hr />
 
   <%= form_for @item, :url => item_path(@item.id), :html => { :multipart => true } do |f| %>
 
@@ -22,4 +21,3 @@
 
   <% end %>
 </div>
-
