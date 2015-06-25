@@ -15,5 +15,13 @@ RSpec.describe Cat, type: :model do
         expect(Cat.all.by_name.first).to eq(@cat_1)
       end
     end #describe .by_name endtag
+
+    describe " Category validation" do 
+      it { should validate_presence_of(:name) }
+    end
+
+    describe "Category relationship" do
+      it { should have_many(:items) }
+    end
   end #context class methods endtag
 end
