@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
-  let(:item) { Item.create(name: "Buick", price: 2345.80, description: "1987 Buick Skylark in great condition!", cat_id: 1) }
-  let(:cat) {Cat.create(name: "Cars")}
+  let(:cat) { create(:cat) }
+  let(:item) { create(:item, cat: cat) }
+
 
   describe "GET #index" do
     it "returns http success" do
