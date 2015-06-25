@@ -38,6 +38,10 @@ gem "paperclip", "~> 4.2"
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
+
+  gem "binding_of_caller"
+
+  gem "better_errors"
   
   gem 'rspec-rails', '~> 3.0'
 
