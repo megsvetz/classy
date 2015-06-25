@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CatsController, type: :controller do
   
-  let(:cat) {create(:cat) }
+  let(:cat){create(:cat)}
 
   describe "GET #index" do
     it "returns http success" do
