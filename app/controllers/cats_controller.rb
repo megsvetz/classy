@@ -6,7 +6,6 @@ class CatsController < ApplicationController
   end #index endtag
 
   def show
-    # raise "the roof"
     @items = Item.where(cat_id: params[:id])
     # unless(@items == @cat.id)
     #   redirect_to cats_path
@@ -18,11 +17,13 @@ class CatsController < ApplicationController
   end
 
   def create
-    if @cat = Cat.create(cat_params)
+    @cat = Cat.create(cat_params)
+    if @cat.save 
       flash[:notice]= "Category created successfully!"
       redirect_to(cats_path)
     else
       flash[:error]= "Category creation failed!"
+      # raise "the roof"
       render :new
     end
   end # Create endtag

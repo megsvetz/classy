@@ -47,11 +47,12 @@ RSpec.describe CatsController, type: :controller do
       expect(flash[:notice]).to be_present
     end
 
-    it "doesn't update correctly" do 
+    it "doens't update" do 
       put :update, id: cat.id, cat: {name: nil}
-      expect(flash[:error]).to be_present
+      should set_flash[:error]
+      expect(response).to render_template(:edit)
     end
-  end #describe put #update endtag
+  end #describe PUT #update endtag
 
   describe "POST #create" do
     it "Creates Category into database correctly" do
@@ -59,14 +60,21 @@ RSpec.describe CatsController, type: :controller do
       expect(response).to have_http_status(:redirect)
       expect(flash[:notice]).to be_present
     end
+
+    it "doesn't create correctly" do
+      post :create, cat: {name: nil}
+      expect(response).to render_template(:new)
+      should set_flash[:error]
+    end
   end #describe POST #create endtag
 
   describe "DELETE #destroy" do
     it "deletes" do
       delete :destroy, id: cat.id
       expect(Cat.all.count).to eq(0)
-      expect(flash[:alert]).to be_present
+      # expect(flash[:alert]).to be_present
       expect(response).to have_http_status(:redirect)
+      should set_flash[:alert]
     end
     
     it "does not delete" do
