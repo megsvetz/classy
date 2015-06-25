@@ -21,6 +21,15 @@ RSpec.describe Item, type: :model do
         expect(Item.all.by_price.first).to eq(@item_1)
       end
     end
-  end
+
+    describe "validations" do
+      it { should validate_presence_of(:name) }
+      it { should validate_presence_of(:price) }
+    end
+
+    describe "relationships" do
+       it { should belong_to(:cat) }
+    end
+  end #context class methods endtag
 
 end
