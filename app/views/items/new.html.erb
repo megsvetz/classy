@@ -1,24 +1,23 @@
-<h1 class="header">Create New Listing</h1>
+<div class="text-center center-block">
+  <h1 class="header">Create New Listing</h1>
 
-<%= form_for @item, :url => items_path, :html => { :multipart => true } do |f| %>
+  <%= form_for @item, :url => items_path, :html => { :multipart => true } do |f| %>
 
-  <h3>Title: <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:50%;" %></h1>
-  <br>
-  <h4>Price: $<%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:50%;" %></h4>
-  <br>
-  <h5>Description: <%= f.text_area :description, class: "form-control", :placeholder => "Enter Description",:style => "width:50%;" %></h5>
-  <br>
-  <h5>Category: <%= f.collection_select :cat_id, Cat.all, :id, :name, class: "form-control" %></h5>
-  <br>
-  <h5>Upload Photo: <%= f.file_field :item_pic %></h5>
-  <br>
-  <%= %>
-  <br>
-  <%= f.submit("Create Listing") %>
-  <br><br>
-
-<% end %>
-
-<br>
+    <h3>Title: <%= f.text_field :name, class: "form-control", :placeholder => "Enter Name of Item", :style => "width:100%;" %></h1>
+    <br>
+    <h4>Price: <%= f.text_field :price, class: "form-control", :placeholder => "Enter Price",:style => "width:100%;" %></h4>
+    <br>
+    <h4>Description: <%= f.text_area :description, class: "form-control", :placeholder => "Enter Description",:style => "width:100%;" %></h4>
+    <br>
+    <h4>Category: <%= f.collection_select :cat_id, Cat.all, :id, :name, class: "form-control" %></h4>
+    <br>
+    <h4>Upload Photo: <%= f.file_field :item_pic %></h4>
+    <br>
+    <%= %>
+    <br>
+    <%= f.submit("Create Listing", class: "myButton") %>
+    <br><br>
+  <% end %>
+</div>
 
 

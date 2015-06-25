@@ -1,9 +1,22 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <%= image_tag "classy.png", width: "15%", height:"auto", justify: "left" %>
-      </a>
+      <div class="navbar-brand">
+        <%= image_tag "classy.png", width: "25%", height:"auto", justify: "left" %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to('Home', root_path, class: "header-font") %></li> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories 
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/cats">See All</a></li>
+              <li><a href="/cats/new">Create New</a></li>
+            </ul>
+          </li> 
+        </ul>     
+      </div>
     </div>
   </div>
 </nav>
+
