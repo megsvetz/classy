@@ -34,8 +34,13 @@ gem "paperclip", "~> 4.2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :test do
 
-gem 'simplecov', :require => false, :group => :test
+  gem 'simplecov', :require => false
+
+  gem 'shoulda-matchers'
+
+end
 
 group :development, :test do
 
