@@ -1,11 +1,18 @@
-<h1>Welcome to Classy...</h1>
-
-    <div class="row">
-      <div class="col-sm-6">
-         <%= image_tag "cat.png", width: "100%", height:"auto", justify: "center" %>
-      </div>
-      <div class="col-sm-6">
-         <%= image_tag "cat.png", width: "100%", height:"auto", justify: "center" %>
-      </div>
-      
+<h1 class="text-center">Welcome to Classy...</h1><br>
+  <div class="row">
+    <div class="col-sm-6 text-center">
+       <h3>Go to Categories</h3>
     </div>
+    <div class="col-sm-6 text-center">
+       <h3>Go to Listings</h3>
+    </div> 
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 text-center">
+       <a href= "cats#index"><%= image_tag "cat.jpg", width: "50%", height:"auto", justify: "center" %></a>
+    </div>
+    <div class="col-sm-6 text-center">
+       <a href="items#index"><%= image_tag "list-icon.png", width: "50%", height:"auto", justify: "center" %></a>
+    </div> 
+  </div>
