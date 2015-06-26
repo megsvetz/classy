@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe CatsController, type: :controller do
-  
   let(:cat){create(:cat)}
 
   describe "GET #index" do
@@ -47,7 +46,7 @@ RSpec.describe CatsController, type: :controller do
       expect(flash[:notice]).to be_present
     end
 
-    it "doens't update" do 
+    it "doesn't update" do 
       put :update, id: cat.id, cat: {name: nil}
       should set_flash[:error]
       expect(response).to render_template(:edit)

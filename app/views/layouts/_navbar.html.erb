@@ -2,31 +2,44 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <div class="navbar-brand">
-      <row>
+        <row>
         <%= image_tag "classy.png", width: "25%", height:"auto", justify: "left", display: "inline-block" %>
-        <ul class="nav navbar-nav navbar-right" style="display: inline-block">
-          <li><%= link_to('Home', root_path, class: "header-font") %></li> 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories 
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to('See All', cats_path, class: "header-font") %></li>
-              <li><%= link_to('Create New', new_cat_path, class: "header-font") %></li>
-            </ul>
-          </li> 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Items 
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to('See All', items_path, class: "header-font") %></li>
-              <li><%= link_to('Create New', new_item_path, class: "header-font") %></li>
-            </ul>
-          </li> 
-        </ul>     
-      </row>
+          <row>
+            <ul class="nav navbar-nav navbar-right" style="display: inline-block">
+              <li><%= link_to('Home', root_path, class: "header-font") %></li>
+              <li><%= link_to('Categories', cats_path, class: "header-font") %></li> 
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Items 
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to('See All', items_path, class: "header-font") %></li>
+                  <li><%= link_to('Create New', new_item_path, class: "header-font") %></li>
+                </ul>
+              </li>
+              <% if user_signed_in? %>
+                <li class="header-font"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'header-font' %></li>
+                <li class="header-font"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'header-font' %></li>
+              <% else %>
+                <li class="header-font"><%= link_to "Sign up", new_user_registration_path, :class => 'header-font' %></li>
+                <li class="header-font"><%= link_to "Login", new_user_session_path, :class => 'header-font' %></li>
+              <% end %>
+            </ul>  
+          </row>   
+        </row>
       </div>
     </div>
   </div>
 </nav>
+
+
+
+  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><% current_user.email %> 
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'header-font' %></li>
+                  <li><%= link_to('My Listings', _item_path, class: "header-font") %></li>
+                </ul>
+              </li>

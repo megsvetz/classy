@@ -1,11 +1,17 @@
-<h1 class="text-center">Edit Category</h1>
-<hr />
-<row><a href="<%= cats_path %>" class="btn btn-primary pull-left" style="display:inline-block">Back to Categories</a>
-<a href="<%= new_cat_path %>" class="btn btn-success pull-right" style="display:inline-block">Add New Category</span></a><br><br><br></row>
+<% if current_user.membership == 1 %>
+  <h1 class="text-center">Edit Category</h1>
+  <hr />
+  <row><a href="<%= cats_path %>" class="btn btn-primary pull-left" style="display:inline-block">Back to Categories</a>
+  <a href="<%= new_cat_path %>" class="btn btn-success pull-right" style="display:inline-block">Add New Category</span></a><br><br><br></row>
 
-<div class="text-center">
-  <%= form_for(@cat) do |c| %>
-    <h3> Name <%= c.text_field(:name) %></h3><br>
-    <%= c.submit "Save", class:"myButton" %>
-  <% end %>
- </div
+  <div class="text-center">
+    <%= form_for(@cat) do |c| %>
+      <h3> Name <%= c.text_field(:name) %></h3><br>
+      <%= c.submit "Save", class:"myButton" %>
+    <% end %>
+   </div>
+
+<% else %>
+  <h2 class="text-center">Sorry the page you were looking for does not exist.</h2>
+
+<% end %>

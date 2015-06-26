@@ -1,3 +1,44 @@
 // Place all the styles related to the cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.catButton {
+  -moz-box-shadow:inset 10px 15px 27px -2px #ffffff;
+  -webkit-box-shadow:inset 10px 15px 27px -2px #ffffff;
+  box-shadow:inset 10px 15px 27px -2px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #d1cdd1));
+  background:-moz-linear-gradient(top, #ffffff 5%, #d1cdd1 100%);
+  background:-webkit-linear-gradient(top, #ffffff 5%, #d1cdd1 100%);
+  background:-o-linear-gradient(top, #ffffff 5%, #d1cdd1 100%);
+  background:-ms-linear-gradient(top, #ffffff 5%, #d1cdd1 100%);
+  background:linear-gradient(to bottom, #ffffff 5%, #d1cdd1 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d1cdd1',GradientType=0);
+  background-color:#ffffff;
+  -moz-border-radius:42px;
+  -webkit-border-radius:42px;
+  border-radius:42px;
+  border:5px solid #a3a1a3;
+  display:inline-block;
+  cursor:pointer;
+  color:black;
+  font-family:Arial;
+  font-size:28px;
+  font-weight:bold;
+  padding:12px 76px;
+  text-decoration:none;
+  text-shadow:-1px 1px 19px #ffffff;
+}
+.catButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d1cdd1), color-stop(1, #ffffff));
+  background:-moz-linear-gradient(top, #d1cdd1 5%, #ffffff 100%);
+  background:-webkit-linear-gradient(top, #d1cdd1 5%, #ffffff 100%);
+  background:-o-linear-gradient(top, #d1cdd1 5%, #ffffff 100%);
+  background:-ms-linear-gradient(top, #d1cdd1 5%, #ffffff 100%);
+  background:linear-gradient(to bottom, #d1cdd1 5%, #ffffff 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1cdd1', endColorstr='#ffffff',GradientType=0);
+  background-color:#d1cdd1;
+}
+.catButton:active {
+  position:relative;
+  top:1px;
+}

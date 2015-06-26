@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
   get 'welcomes/index'
 
   resources :cats
@@ -10,6 +11,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcomes#index'
+
+  #get 'welcomes#listings'
+  get ':username' => "welcomes#listings"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -8,8 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
+    
     <%= render 'layouts/navbar' %>
+    
     <div class="container" style="background-color:white" >
+      <p class="notice" style="display:none"><%= notice %></p>
+      <p class="alert" style="display:none"><%= alert %></p>
      
       <%= yield %>
 

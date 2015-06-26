@@ -1,4 +1,4 @@
-class CatsController < ApplicationController
+ class CatsController < ApplicationController
   before_action :find_cat, only: [:update, :edit, :destroy, :show]
 
   def index
@@ -6,6 +6,7 @@ class CatsController < ApplicationController
   end #index endtag
 
   def show
+    
     @items = Item.where(cat_id: params[:id])
     # unless(@items == @cat.id)
     #   redirect_to cats_path

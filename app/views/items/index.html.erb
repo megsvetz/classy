@@ -18,9 +18,12 @@
       <td><%= link_to(item.name, item_path(item)) %></td>
       <td>$ <%= item.price %></td>
       <td><%= item.description %></td>
-      <td><a href="<%= edit_item_path(item) %>" class="btn btn-info"><span class = "glyphicon glyphicon-pencil"></span></a>
-        <a href="<%= item_path(item) %>" class="btn btn-danger" data-method="delete"><span class="glyphicon glyphicon-trash"></span></a>
-      </td>
+
+      <% if current_user.id == item.user_id %>
+        <td><a href="<%= edit_item_path(item) %>" class="btn btn-info"><span class = "glyphicon glyphicon-pencil"></span></a>
+            <a href="<%= item_path(item) %>" class="btn btn-danger" data-method="delete"><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+      <% end %>
     </tr>
   <% end %>
 </tbody>

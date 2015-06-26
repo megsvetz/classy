@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:edit, :update, :show, :destroy]
   
   def index
+    @user = current_user
     @items = Item.all
   end
 
@@ -9,6 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @item = Item.new
   end
 
@@ -45,7 +47,7 @@ class ItemsController < ApplicationController
 
 private
   def item_params
-    params.require(:item).permit(:name, :price, :description, :cat_id, :item_pic)
+    params.require(:item).permit(:name, :price, :description, :cat_id, :item_pic, :user_id)
   end
 
   def find_item
