@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root 'welcomes#index'
 
   #get 'welcomes#listings'
-  get ':username' => "welcomes#listings"
+  get ':id' => "welcomes#listings"
 
 
   # Example of regular route:

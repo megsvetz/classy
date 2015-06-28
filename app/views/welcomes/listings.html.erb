@@ -1,0 +1,27 @@
+<h1 class="text-center">Your Listings</h1>
+<hr />
+<row><a href="<%= root_path %>" class="btn btn-primary pull-left" style="display:inline-block">Back to Home</a>
+<a href="<%= new_item_path %>" class="btn btn-success pull-right" style="display:inline-block">Add New Listing</span></a></row><br><br><br>
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th class="col-md-6">Description</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.items.each do |item| %>
+      <tr>
+        <td><%= link_to(item.name, item_path(item)) %></td>
+        <td>$ <%= item.price %></td>
+        <td><%= item.description %></td>
+        <td><a href="<%= edit_item_path(item) %>" class="btn btn-info"><span class = "glyphicon glyphicon-pencil"></span></a>
+            <a href="<%= item_path(item) %>" class="btn btn-danger" data-method="delete"><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
