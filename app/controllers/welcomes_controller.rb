@@ -3,7 +3,7 @@ class WelcomesController < ApplicationController
   end
 
   def listings
-    @user = User.find_by(id: params[:id])
+    @user = current_user
     unless @user
       render(text: "User not found.", status: :not_found)
     end
