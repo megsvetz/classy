@@ -24,7 +24,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'header-font' %></li>
-                      <li><%= link_to 'My Listings', root_path(current_user.id), :class => "header-font" %></li>
+                      <li><%= link_to 'My Listings', welcomes_index_path[current_user.id], :class => "header-font" %></li>
                     </ul>
                   </li>
                 <li class="header-font"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'header-font' %></li>
