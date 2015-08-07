@@ -27,6 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5'
 gem "paperclip", "~> 4.2"
 
+group :production do
+  gem 'puma', '~> 2.12.3'
+  gem 'rails_12factor', '~> 0.0.3'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
