@@ -1,4 +1,5 @@
 class WelcomesController < ApplicationController
+  before_action :authenticate_user!, only: [:listings]
   def index
   end
 
